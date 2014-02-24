@@ -15,7 +15,7 @@ window.onload = function () {
 		context.moveTo(0, 0);
 		
 		for (var i = 1; i < canvas.width; i++) {
-			var currentSine = fullScale * Math.sin(fullScale / i);
+			var currentSine = fullScale * Math.sin(i / fullScale);
 			context.lineTo(i, currentSine);
 			previousSine = currentSine;
 		}
@@ -27,7 +27,7 @@ window.onload = function () {
 		context.restore();
 	};
 	
-	for (var i = 1; i < 10; i++) {
-		sineWave(canvas, i, 20);
+	for (var i = 1; i < 28; i++) {
+		sineWave(canvas, i, 10);
 	}
 };
